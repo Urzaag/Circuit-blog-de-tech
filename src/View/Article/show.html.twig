@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - {{ article.title }}
+{% endblock %}
+
+{% block content %}
+    {% embed '_includes/Article/bt-article-head.html.twig' %}
+
+        {% block show_article_title %}
+            {{ article.title }}
+        {% endblock %}
+        {% block show_article_author %}
+            {{ author.user_name }}
+        {% endblock %}
+        {% block show_article_date %}
+            {{ article.article_created_at|date("d/m/Y h:i") }}
+        {% endblock %}
+        {% block show_article_description %}
+            {{ article.description_article }}
+        {% endblock %}
+    {% endembed %}
+    {# Article custom content, images then text #}
+    {% embed '_includes/Article/bt-article-content.html.twig' %}
+        {% block show_article_main_img %}{{ pictures.pictureMain.link }}{% endblock %}
+        {% block show_article_content_part1 %}
+            {{ bodyArticleSplit.0 }}
+        {% endblock %}
+        {% block show_article_second_img %}{{ pictures.picture2.link }}{% endblock %}
+        {% block show_article_content_part2 %}
+            {{ bodyArticleSplit.1 }}
+        {% endblock %}
+        {% block show_article_third_img %}{{ pictures.picture3.link }}{% endblock %}
+        {% block show_article_content_part3 %}
+            {{ bodyArticleSplit.2 ~bodyArticleSplit.3 }}
+        {% endblock %}
+    {% endembed %}
+    {# -- END OF -- Article custom content, images then text #}
+{% endblock %}
+
+{% block next_previous_bar %}{% embed  '_includes/Article/bt-bar-next-article.html.twig' %}{% endembed %}{% endblock %}
+{% block Comments %}{% embed '_includes/Article/bt-article-comments.html.twig' %}{% endembed %}{% endblock %}

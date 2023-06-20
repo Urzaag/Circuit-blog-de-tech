@@ -1,0 +1,86 @@
+<div class="bt-main-mosaic text-center">
+    <div class="row">
+            <div class="col">
+                <a href="{% block mosaic_article_link_big_left %}{% endblock %}">
+                    <h2 class="bt-main-mosaic-title-centered">
+                        {# Custom title for mosaic article top-left #}
+                        {% block mosaic_article_title_big_left %}
+                            Titre article mosaïque
+                        {% endblock %}
+                    </h2>
+                    <img src="
+                        {# Custom img for mosaic article top-left  #}
+                        {% block mosaic_article_img_big_left %}
+                            https://placehold.co/1080x400
+                        {% endblock %}"
+                         alt="img mosaic 1">
+                </a>
+            </div>
+            <div class="col">
+                <a href="{% block mosaic_article_link_big_right %}{% endblock %}">
+                    <h2 class="bt-main-mosaic-title-centered">
+                        {# Custom title for mosaic article top-right #}
+                        {% block mosaic_article_title_big_right %}
+                            Titre article mosaïque
+                        {% endblock %}
+                    </h2>
+                    <img src="
+                        {# Custom img for mosaic article top-right #}
+                        {% block mosaic_article_img_big_right %}
+                            https://placehold.co/727x400
+                        {% endblock %}"
+                         alt="img mosaic 2">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a href="{% block mosaic_article_link_small_left %}{% endblock %}">
+                    <h2 class="bt-main-mosaic-title-top">
+                        {# Custom title for mosaic article bottom-left #}
+                        {% block mosaic_article_title_small_left %}
+                            Titre article mosaïque
+                        {% endblock %}
+                    </h2>
+                    <img src="
+                        {# Custom img for mosaic article bottom-left #}
+                        {% block mosaic_article_img_small_left %}
+                            https://placehold.co/483x300
+                        {% endblock %}"
+                         alt="img mosaic 3">
+                </a>
+            </div>
+            <div class="col">
+                <a href="{% block mosaic_article_link_small_mid %}{% endblock %}">
+                    <h2 class="bt-main-mosaic-title-bottom">
+                        {# Custom img for mosaic article bottom-mid #}
+                        {% block mosaic_article_title_small_mid %}
+                            Titre article mosaïque
+                        {% endblock %}
+                    </h2>
+                    <img src="
+                        {# Custom img for mosaic article bottom-mid #}
+                        {% block mosaic_article_img_small_mid %}
+                            https://placehold.co/483x300
+                        {% endblock %}"
+                         alt="img mosaic 4">
+                </a>
+            </div>
+            <div class="col">
+                <a href="{% block mosaic_article_link_small_right %}{% endblock %}">
+                    <h2 class="bt-main-mosaic-title-top">
+                        {# Custom img for mosaic article bottom-right #}
+                        {% block mosaic_article_title_small_right %}
+                            Titre article mosaïque
+                        {% endblock %}
+                    </h2>
+                    <img src="
+                        {# Custom img for mosaic article bottom-right #}
+                        {% block mosaic_article_img_small_right %}
+                            https://placehold.co/483x300
+                        {% endblock %}"
+                         alt="img mosaic 5">
+                </a>
+            </div>
+        </div>
+</div>

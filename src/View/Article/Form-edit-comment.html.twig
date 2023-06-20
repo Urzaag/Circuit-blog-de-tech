@@ -1,0 +1,25 @@
+{% extends 'layout.html.twig' %}
+{# Custom title on the index #}
+{% block title %}
+    {{ parent() }} - Profil
+{% endblock %}
+{% block content %}
+
+<div class="bt-comments" id="bt-edit-comment-total">
+    <div class="bt-total-comment-section">
+        <h2 class="bt-title-commentaires pt-5">Edit votre commentaire </h2>
+        <div class="bt-bar-comments"></div>
+    </div>
+
+<form method="post">
+    <div class="row bt-comment-form">
+        <label class="bt-comment-form-title" for="content_comment" id="bt-edit-comment">Ton commentaire :</label>
+        <textarea class="bt-form-input" name="content_comment" id="content_comment" rows="5" required>{{ comment.content_comment }}</textarea>
+    </div>
+    <div class="d-flex justify-content-center mt-3 mb-5">
+        <button class="bt-button bt-button-green btn btn-primary" type="submit" name="SendComment">Mettre a Jour</button>
+    </div>
+</form>
+</div>
+
+{% endblock %}

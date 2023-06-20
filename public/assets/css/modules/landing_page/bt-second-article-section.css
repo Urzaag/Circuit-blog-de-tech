@@ -1,0 +1,109 @@
+.bt-second-section-article .row {
+    margin-bottom: var(--bt-spacing);
+}
+
+.bt-second-section-article .row .row:last-of-type {
+    margin-bottom: 0;
+}
+
+.bt-second-section-article .row .row {
+    margin-bottom: var(--bt-spacing);
+}
+
+.bt-second-section-article {
+    margin-top: var(--bt-spacing) !important;
+}
+
+.bt-section-article {
+    text-decoration: none;
+    color: var(--bt-main-white);
+    font-family: var(--bt-main-font);
+}
+
+.bt-card-section2 {
+    display: flex;
+    padding: 2rem 1.8rem 2rem 1.2rem;
+    border-radius: var(--bt-main-border-radius);
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-top: 3rem;
+    color: black;
+}
+
+.bt-card-section2:hover {
+    transform: scale(1.1);
+}
+
+.bt-card-section2 img {
+    object-fit: cover;
+    border-radius: inherit;
+    height: 12rem;
+    width: 90%;
+    box-shadow: var(--bt-main-box-shadow);
+    margin: -5rem auto 0.5rem auto;
+    max-width: 1000px;
+}
+
+.bt-card-section2 h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-family: var(--bt-main-font);
+}
+
+.bt-card-colored {
+    color: var(--bt-main-white) !important;
+}
+
+.bt-card-section2 h3 {
+    display: none;
+}
+
+.bt-card-section2 p:last-of-type {
+    display: none;
+}
+
+.bt-card-section2 button {
+    display: none;
+}
+
+.bt-card-section2 {
+    transition: transform .2s ease;
+}
+
+.bt-card-section2:hover {
+    transform: scale(1.2);
+}
+
+.bt-card-section2 .bt-date {
+    font-family: var(--bt-main-font);
+    margin-bottom: 1.5rem;
+}
+
+@media (width <= 740px) {
+    .bt-second-section-article {
+        flex-direction: column-reverse;
+    }
+    .bt-card-section2 {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .bt-card-section2 img {
+        margin: -5rem 0 0.5rem 0;
+        width: 100%;
+    }
+
+    .bt-second-section-article .col .row {
+        flex-direction: column;
+    }
+
+    .bt-card-section2:not(.bt-card-colored) {
+        display: none;
+    }
+
+    .bt-card-section2 {
+        padding: 2rem 1.2rem;
+    }
+
+}

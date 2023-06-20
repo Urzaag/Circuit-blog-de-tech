@@ -1,0 +1,32 @@
+<div class="d-md-flex justify-content-md-end pt-4 px-4">
+    <a href="/user/show?={{ user.user_id }}" class="bt-button bt-button-green btn btn-primary">Annuler</a>
+</div>
+<h1 class="bt-form-h1 text-center pb-3">{% block title_form %}Titre formulaire{% endblock %}</h1>
+<div class="d-flex justify-content-center">
+    <form action="" method="post" enctype="multipart/form-data" class="bt-container-form row g-4">
+        <div class="col-md-6">
+            <input type="text" class="bt-form-input form-control" id="title" name="title" placeholder="Titre de l'article" value="{{article.title }}">
+        </div>
+        <div class="d-grid col-md-6 mx-auto">
+            <label for="file1" class="bt-button bt-button-red btn btn-primary">{% block button_picture1 %}Téléchargement image principale{% endblock %}</label>
+            <input type="file" name="picture1" id="file1" class="bt-input-file">
+        </div>
+        <div class="col-md-6">
+           <textarea class="bt-form-input form-control" id="description" name="description" placeholder="Description (50 mots maximum)"  rows="3" required>{{ article.description_article }}</textarea>
+        </div>
+        <div class="d-grid col-md-3 mx-auto">
+            <label for="file2" class="bt-button bt-button-orange btn btn-primary">{% block button_picture2 %}Téléchargement image 2{% endblock %}</label>
+            <input type="file" name="picture2" id="file2" class="bt-input-file">
+        </div>
+        <div class="d-grid col-md-3 mx-auto">
+            <label for="file3" class="bt-button bt-button-orange btn btn-primary">{% block button_picture3 %}Téléchargement image 3{% endblock %}</label>
+            <input type="file" name="picture3" id="file3" class="bt-input-file">
+        </div>
+        <div class="col-12">
+            <textarea class="bt-form-input form-control" id="content" name="content" placeholder="Contenu de l'article (1000 mots maximum)" rows="10" required >{{ article.body_article }}</textarea>
+        </div>
+        <div class="d-md-flex justify-content-md-center pb-5">
+            <button type="submit" class="bt-button bt-button-green btn btn-primary" name="articleAddSubmit">{% block button_submit %}Submit{% endblock %}</button>
+        </div>
+    </form>
+</div>

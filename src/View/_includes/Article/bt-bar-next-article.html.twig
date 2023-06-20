@@ -1,0 +1,20 @@
+<div class="container-fluid d-flex justify-content-between" id="bt-Article-Prev-Next-bar">
+    {% if previousId %}
+        <div class="col-5" id="bt-Article-Previous-Article">
+            <a class="d-md-flex" href="/article/show?id={{ previousId[0]['id_article'] }}">
+                <img class="p-3" src="/assets/images/{{ linkPreviousPhoto[0]['link'] }}" alt="">
+                <h5 class="d-flex align-items-center">{{ previousId[0]['title'] }}</h5>
+            </a>
+        </div>
+    {% endif %}
+
+    {% if nextId %}
+        <div class="col-5" id="bt-Article-Next-Article">
+            <a class="d-flex" href="/article/show?id={{ nextId[0]['id_article'] }}">
+                <h5 class="d-flex align-items-center">{{ nextId[0]['title'] }}</h5>
+                <img class="p-3" src="/assets/images/{{ linkNextPhoto[0]['link'] }}" alt="">
+            </a>
+        </div>
+    {% endif %}
+</div>
+

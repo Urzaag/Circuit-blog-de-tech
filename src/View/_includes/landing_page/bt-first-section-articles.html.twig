@@ -1,0 +1,124 @@
+<div class="row">
+        {# Include, custom content and style for row : 1 #}
+        {% embed '_includes/landing_page/bt-section-article-card.html.twig' %}
+            {# Custom style for card article #}
+            {% block section_article_card_style %}
+                bt-card-section1
+                bt-bg-light-green
+                bt-card-colored
+            {% endblock %}
+            {% block section_article_img_style %}
+                bt-img-right
+            {% endblock %}
+            {% block section_article_author_date_style %}
+                bt-date
+            {% endblock %}
+            {% block section_article_h3_style %}
+                bt-h3
+            {% endblock %}
+            {% block section_article_description_style %}
+                bt-description
+            {% endblock %}
+            {# -- END OF -- Custom style for card article #}
+            {# Custom content for card article, link, titles, author and date, description, then image #}
+            {% block section_article_link %}
+                /article/show?id={{ articles[0].id_article }}
+            {% endblock %}
+            {% block section_article_img_content %}{{ pictures['id_article: 1'].pictureMain.link }}{% endblock %}
+            {% block section_article_author_date_content %}
+                {{ author['id_article: 1'].user_name }}
+                {{ articles[0].article_created_at|date("d/m/Y") }}
+            {% endblock %}
+            {% block section_article_h3_content %}
+                {{ articles[0].title }}
+            {% endblock %}
+            {% block section_article_description_content %}
+                {{ articles[0].description_article }}
+            {% endblock %}
+            {# -- END OF -- Custom content for card article, link, title then image #}
+        {% endembed %}
+        {# -- END OF -- Include, custom content and style for row : 1 article : 1 #}
+</div>
+<div class="row">
+        {# Include, custom content and style for row : 2 #}
+    {% embed '_includes/landing_page/bt-section-article-card.html.twig' %}
+        {# Custom style for card article #}
+        {% block section_article_card_style %}
+            bt-card-section1
+            bt-card-section1-right
+            bt-bg-orange
+            bt-card-colored
+        {% endblock %}
+        {% block section_article_img_style %}
+            bt-img-left
+        {% endblock %}
+        {% block section_article_author_date_style %}
+            bt-date
+        {% endblock %}
+        {% block section_article_h3_style %}
+            bt-h3
+        {% endblock %}
+        {% block section_article_description_style %}
+            bt-description
+        {% endblock %}
+        {# -- END OF -- Custom style for card article #}
+        {# Custom content for card article, link, titles, author and date, description, then image #}
+        {% block section_article_link %}
+            /article/show?id={{ articles[1].id_article }}
+        {% endblock %}
+        {% block section_article_img_content %}{{ pictures['id_article: 2'].pictureMain.link }}{% endblock %}
+        {% block section_article_author_date_content %}
+            {{ author['id_article: 2'].user_name }}
+            {{ articles[1].article_created_at|date("d/m/Y") }}
+        {% endblock %}
+        {% block section_article_h3_content %}
+            {{ articles[1].title }}
+        {% endblock %}
+        {% block section_article_description_content %}
+            {{ articles[1].description_article }}
+        {% endblock %}
+        {# -- END OF -- Custom content for card article, link, title then image #}
+    {% endembed %}
+        {# -- END OF -- Include, custom content and style for row : 2 article : 2 #}
+</div>
+<div class="row bt-last-row">
+        {# Include, custom content and style for row : 3 article : 1 #}
+        {% embed '_includes/landing_page/bt-section-article-card.html.twig' %}
+            {# Custom style for card article #}
+            {% block section_article_card_style %}
+                bt-card-section1
+                bt-bg-red
+                bt-card-colored
+            {% endblock %}
+            {% block section_article_img_style %}
+                bt-img-right
+            {% endblock %}
+            {% block section_article_author_date_style %}
+                bt-date
+            {% endblock %}
+            {% block section_article_h3_style %}
+                bt-h3
+            {% endblock %}
+            {% block section_article_description_style %}
+                bt-description
+            {% endblock %}
+            {# -- END OF -- Custom style for card article #}
+            {# Custom content for card article, link, titles, author and date, description, then image #}
+            {% block section_article_link %}
+                /article/show?id={{ articles[2].id_article }}
+            {% endblock %}
+            {% block section_article_img_content %}{{ pictures['id_article: 3'].pictureMain.link }}{% endblock %}
+            {% block section_article_author_date_content %}
+                {{ author['id_article: 3'].user_name }}
+                {{ articles[2].article_created_at|date("d/m/Y") }}
+            {% endblock %}
+            {% block section_article_h3_content %}
+                {{ articles[2].title }}
+            {% endblock %}
+            {% block section_article_description_content %}
+                {{ articles[2].description_article }}
+            {% endblock %}
+            {# -- END OF -- Custom content for card article, link, title then image #}
+        {% endembed %}
+        {# -- END OF -- Include, custom content and style for row : 3 article : 1 #}
+</div>

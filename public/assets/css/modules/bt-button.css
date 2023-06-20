@@ -1,0 +1,36 @@
+.bt-button {
+    border-radius: var(--bt-main-border-radius);
+    background: var(--bt-main-bg-color);
+    box-shadow: var(--bt-main-box-shadow);
+}
+
+.bt-button-green {
+    border: none;
+}
+
+.bt-button-red {
+    background: var(--bt-bg-card-red);
+    border: none;
+}
+
+.bt-button-orange {
+    background: var(--bt-bg-cards-orange);
+    border: none;
+}
+
+.bt-button:hover {
+    background : var(--bt-bg-card-light-green);
+}
+
+.bt-button-delete {
+    background : var(--bt-bg-card-darkred);
+}
+
+.bt-button-delete:hover {
+    background : var(--bt-bg-card-red);
+}
+
+#bt-button-to-profile    {
+    width:9.375rem;
+    margin-bottom: 1.25rem;
+}

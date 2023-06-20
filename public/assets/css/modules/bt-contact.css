@@ -1,0 +1,12 @@
+.bt-contact {
+    font-family: var(--bt-logo-font);
+}
+
+.bt-contact input, .bt-contact textarea {
+    border-radius: initial;
+    border-left: solid 0.063rem #002D2B;
+    border-bottom: solid 0.063rem #002D2B;
+    border-top: none;
+    border-right: none;
+    background: var(--bt-main-white);
+}

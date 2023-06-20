@@ -1,0 +1,64 @@
+{% extends 'layout.html.twig' %}
+{# Custom title on the index #}
+{% block title %}
+    {{ parent() }} - Modification du profil
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class ="bt-profile" ></div>
+        <h1 class="text-center p-3">Modifie tes informations personnelles</h1>
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <form method="post" action="" class="bt-form bt-form-user">
+                    <div class="row p-auto">
+                        <div class="col-md-3">
+                            <label for="firstName" class="pt-4">Prénom : </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="pt-3" id="firstName" name="firstName" value="{{ user.first_name }}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="lastName" class="">Nom : </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="" id="lastName" name="lastName" value="{{ user.last_name }}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="username" class="">Pseudo : </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="" id="username" name="username" value="{{ user.user_name }}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="email" class="">Email : </label>
+                        </div>
+                        <div class="col">
+                            <input type="email" class="" id="email" name="email" value="{{ user.email }}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="birthday" class="btn-light">Date de naissance : </label>
+                        </div>
+                        <div class="col">
+                            <input type="date" class="input" id="birthday" name="birthday" value="{{ user.birthday }}">
+                        </div>
+                    </div>
+
+                    <div class="row pb-4 pt-0">
+                        <button type="submit" name="editUserSubmit" class="bt-button-login bt-button-edit">Modifier</button>
+                    </div>
+                </form>
+                <div class="d-flex justify-content-center">
+                    <a onclick="checkerDelete()" href="/user/delete" type="submit" class="btn btn-primary bt-button bt-button-delete my-3 text-center">Supprimer mon profil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

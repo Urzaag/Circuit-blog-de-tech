@@ -1,0 +1,59 @@
+<section class="bt-contact container" id="bt-contact-section">
+    <div class="bt-contact-head row d-flex justify-content-center">
+        <h2 class="text-center my-3" id="bt-contact-title">Contacte nous !</h2>
+        <p class="text-center w-responsive mx-auto">Une question ?</p>
+        <p class="text-center w-responsive mx-auto mb-5">N'hésite pas à nous écrire, nous te répondrons rapidement.</p>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+
+        <div class="col-md-6 mb-5 mx-auto">
+            <form id="contact-form" name="contact-form" method="POST">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="md-form mb-3">
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Ton nom">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="md-form mb-3">
+                            <input type="text" id="email" name="email" class="form-control" placeholder="Ton email">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-3">
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Le sujet de ton message">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <label class="mb-1" for="message">Ton message :</label>
+                            <textarea id="message" name="message" rows="4" class="form-control md-textarea" placeholder="Explique nous ta demande"></textarea>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+
+            <div class="text-center my-3 text-md-left">
+                <a class="bt-button bt-button-red btn btn-primary" onclick="document.getElementById('contact-form').submit();">Envoyer</a>
+            </div>
+            <div class="status"></div>
+        </div>
+
+    </div>
+
+</section>

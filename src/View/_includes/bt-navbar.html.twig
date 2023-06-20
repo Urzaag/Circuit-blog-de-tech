@@ -1,0 +1,77 @@
+{% block navbar %}
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Try scrolling the rest of the page to see this option in action.</p>
+        </div>
+    </div>
+    <nav class="bt-navbar navbar navbar-expand d-flex sticky-top">
+        {# <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button> #}
+        <button class="navbar-toggler first-button" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+            <div class="animated-icon1"><span></span><span></span><span></span></div>
+        </button>
+        <div class="bt-search">
+            <form class="d-flex bt-search-bar" role="search">
+                <input class="bt-search-bar-input form-control me-2" type="search" placeholder="Recherche un article" aria-label="Search">
+                <button class="bt-search-bar-button btn bt-button-orange bt-button-search" type="submit">Chercher</button>
+            </form>
+        </div>
+        <div class="bt-nav navbar d-flex justify-content-center">
+            <div class="bt-icon-search">
+                <button type="button" class="btn" id="bt-icon-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+            </div>
+            <a href ="http://localhost:8000/">
+                <div class ="">
+                    <a href="/"><img class="bt-navbar-logo" src="/assets/images/FinishedLogoP2-modified.png" alt ="logo" class="bc-resize-logo"></a>
+                </div>
+            </a>
+            <div class="bt-icon-user">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle" id="bt-login-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="bt-nav-hello">
+            {% if user is empty %}
+                <h3 class="my-auto">Bienvenue dans le Circuit</h3>
+            {% endif %}
+            {%  if user is not empty %}
+                <h3 class="my-auto">Bienvenue {{ user.user_name }}</h3>
+            {% endif %}
+        </div>
+    </nav>
+    {% embed '_includes/bt-login-modal.html.twig' %}{% endembed %}
+    <script>
+        const search = document.querySelector('#bt-icon-search');
+        const input = document.querySelector('.bt-search-bar-input');
+        const button = document.querySelector('.bt-search-bar-button');
+        let isVisible = false;
+        search.addEventListener('click', () => {
+            input.classList.toggle('is-visible');
+            button.classList.toggle('is-visible');
+        });
+        document.querySelector('.first-button').addEventListener('click', function () {
+
+            document.querySelector('.animated-icon1').classList.toggle('open');
+        });
+        document.querySelector('.second-button').addEventListener('click', function () {
+
+            document.querySelector('.animated-icon2').classList.toggle('open');
+        });
+        document.querySelector('.third-button').addEventListener('click', function () {
+
+            document.querySelector('.animated-icon3').classList.toggle('open');
+        });
+    </script>
+{% endblock %}

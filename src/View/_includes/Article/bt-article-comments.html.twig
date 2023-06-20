@@ -1,0 +1,37 @@
+<div class="bt-comments">
+    <div class="bt-separation-bar-comments"></div>
+    <div class="bt-total-comment-section">
+        <h2 class="bt-title-commentaires pt-5">Commentaires</h2>
+        <div class="bt-bar-comments"></div>
+    </div>
+
+    {% for comment in showComments %}
+        <div class="bt-single-comment pt-3 pb-5">
+            <div class="bt-name-creation-date">
+                <h3>{{ comment.user_name }}</h3>
+                <p> le {{ comment.comment_created_at|date("d/m/Y") }}</p>
+            </div>
+            <div class="bt-comment-content">{{ comment.content_comment }}</div>
+        </div>
+    {% endfor %}
+</div>
+
+{% if showComments is empty %}
+    <p class="p-5 mx-auto">Ancun commentaire, sois le premier à laisser ton avis !</p>
+{% endif %}
+
+{% if user is not empty %}
+    <div class="bt-separation-bar-comments"></div>
+    <div class="bt-comment-area pt-5">
+        <form method="post">
+            <div class="row bt-comment-form">
+                <label for="comment"></label>
+                <textarea class="bt-form-input" name="comment" id="comment" rows="5" placeholder="Laisse un commentaire et donne ton avis" required></textarea>
+            </div>
+            <div class="d-md-flex justify-content-md-center mt-3 mb-5">
+                <button class="bt-button bt-button-green btn btn-primary" type="submit" name="SendComment">Publier</button>
+            </div>
+        </form>
+    </div>
+{% endif %}
+

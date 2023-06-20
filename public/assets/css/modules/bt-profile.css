@@ -1,0 +1,63 @@
+.bt-profile {
+    font-family: var(--bt-main-font);
+}
+
+.bt-table {
+    padding: 2rem;
+    background: var(--bt-bg-card-red);
+    border-radius: var(--bt-main-border-radius);
+    color: var(--bt-main-white);
+    box-shadow: var(--bt-main-box-shadow);
+    width: 60%;
+}
+
+.bt-table td {
+    border-color: var(--bt-bg-card-darkred)
+}
+
+.bt-date {
+    border-style: none;
+}
+
+.bt-profile-articles .bt-card-section2:hover {
+    transform:none;
+}
+
+.bt-profile-articles .bt-card-section2 {
+    padding-left:3.5rem;
+    height: 25rem;
+}
+
+.bt-article-by-id img {
+    border-radius: var(--bt-main-border-radius);
+}
+
+.bt-comment-by-id   {
+    background-color: var(--bt-bg-card-orange);
+    display: flex;
+    padding: 2rem 1.8rem 2rem 1.2rem;
+    border-radius: var(--bt-main-border-radius);
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-top: 3rem;
+    color: black
+}
+
+.bt-comment-by-id a  {
+    color: unset;
+    text-decoration: none;
+
+}
+
+@media screen and (max-width: 780px) {
+    .bt-table {
+        width: 95%;
+    }
+
+    .bt-profile-articles .bt-card-section2 {
+        padding-left: 1rem;
+        width: 90%;
+        margin: 4rem auto;
+    }
+}
+

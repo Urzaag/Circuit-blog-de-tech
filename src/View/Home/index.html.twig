@@ -1,0 +1,155 @@
+{% extends 'layout.html.twig' %}
+{# Custom title on the index #}
+{% block title %}
+    {{ parent() }} - Home
+{% endblock %}
+
+{% block content %}
+    {# Include, custom content and style for Mosaic #}
+    {# ressource : https://twig.symfony.com/doc/3.x/tags/embed.html #}
+    {% embed '_includes/landing_page/bt-grid-articles.html.twig' %}
+        {# Articles : custom link then title then img #}
+        {# Article 1 : #}
+        {% block mosaic_article_link_big_left %}/article/show?id=1{% endblock %}
+        {% block mosaic_article_title_big_left %}
+            La Tech : un monde en constante évolution
+        {% endblock %}
+        {% block mosaic_article_img_big_left %}
+            /assets/images/laptopHalfClosed.jpg
+        {% endblock %}
+        {# Article 2 : #}
+        {% block mosaic_article_link_big_right %}/article/show?id=2{% endblock %}
+        {% block mosaic_article_title_big_right %}
+            Robotique : des machines au service de l'homme
+        {% endblock %}
+        {% block mosaic_article_img_big_right %}
+            /assets/images/robotWork.jpg
+        {% endblock %}
+        {# Article 3 : #}
+        {% block mosaic_article_link_small_left %}/article/show?id=3{% endblock %}
+        {% block mosaic_article_title_small_left %}
+            PHP : un incontournable pour le développement web
+        {% endblock %}
+        {% block mosaic_article_img_small_left %}
+            /assets/images/coding.jpg
+        {% endblock %}
+        {# Article 4 : #}
+        {% block mosaic_article_link_small_mid %}/article/show?id=4{% endblock %}
+        {% block mosaic_article_title_small_mid %}
+            Les compétences clés pour devenir un développeur web réussi
+        {% endblock %}
+        {% block mosaic_article_img_small_mid %}
+            /assets/images/immersivVRDark.jpg
+        {% endblock %}
+        {# Article 5 : #}
+        {% block mosaic_article_link_small_right %}/article/show?id=5{% endblock %}
+        {% block mosaic_article_title_small_right %}
+            Lorem Ipsum : le texte fictif qui facilite la conception
+        {% endblock %}
+        {% block mosaic_article_img_small_right %}
+          /assets/images/Lorem-Ipsum.jpg
+        {% endblock %}
+        {# -- END OF -- Articles : custom title then custom img #}
+    {% endembed %}
+    {# --END OF -- {# Include, custom content and style for Mosaic #}
+
+
+    <div class="container">
+        <div class="row bt-first-section-article">
+            <div class="col">
+                {% include '_includes/landing_page/bt-first-section-articles.html.twig' %}
+            </div>
+            <div class="col-md-auto">
+                {# Include, custom content and style for the first sticky aside on main page #}
+                {% embed '_includes/bt-sticky-aside.html.twig' %}
+                    {% block color %}orange{% endblock %}
+                    {% block titleblock %}A LA UNE{% endblock %}
+                    {% block title %}La puissance de ChatGPT : Comment un modèle de langage améliore la communication{% endblock %}
+
+                    {% block picture %}ChatGPTPhone.jpg{% endblock %}
+
+                    {# sticky aside style customization #}
+                    {% block sticky_aside_header_style %}
+                        lighter
+                    {% endblock %}
+                    {% block sticky_aside_first_article_style %}
+                        orange
+                    {% endblock %}
+                    {% block sticky_aside_second_article_style %}
+                        orange
+                    {% endblock %}
+                    {% block sticky_aside_third_article_style %}
+                        orange
+                    {% endblock %}
+                    {# --END OF -- sticky aside style customization #}
+                    {# sticky aside article titles customization #}
+                    {% block first_article_link %}/article/show?id=7{% endblock %}
+                    {% block sticky_first_article_title %}
+                        La robotique, fléau de demain ?
+                    {% endblock %}
+                    {% block second_article_link %}/article/show?id=10{% endblock %}
+                    {% block sticky_second_article_title %}
+                        12 Citations pour se motiver le matin !
+                    {% endblock %}
+                    {% block third_article_link %}/article/show?id=8{% endblock %}
+                    {% block sticky_third_article_title %}
+                        L'évolution des jeux vidéo
+                    {% endblock %}
+                    {# --END OF -- sticky aside article titles customization #}
+                {% endembed %}
+                {# -- END OF --Include, custom content and style for the first sticky aside on main page #}
+            </div>
+        </div>
+    </div>
+    {% include '_includes/landing_page/bt-bar-newsletter.html.twig' %}
+    <div class="container">
+        <div class="row bt-second-section-article">
+            <div class="col">
+                {# Include for second section of articles, cutom content and style in this file : bt-second-section-articles.html.twig #}
+                {% include '_includes/landing_page/bt-second-section-articles.html.twig' %}
+            </div>
+            <div class="col-md-auto">
+
+                {# Include, custom content and style for the second aside sticky on main page #}
+                {% embed '_includes/bt-sticky-aside.html.twig' %}
+                    {% block color %}red{% endblock %}
+                    {% block titleblock %}QUI SOMMES NOUS ?{% endblock %}
+                    {% block title %}Découvre Jean-Marc de Stratégir : fondateur et rédacteur du Circuit.{% endblock %}
+                    {% block description %}{% endblock %}
+                    {% block picture %}jeanmarc.jpg{% endblock %}
+                    {# sticky aside style customization #}
+                    {% block sticky_aside_header_style %}
+                        lighter
+                    {% endblock %}
+                    {% block sticky_aside_first_article_style %}
+                        orange
+                    {% endblock %}
+                    {% block sticky_aside_second_article_style %}
+                        orange
+                    {% endblock %}
+                    {% block sticky_aside_third_article_style %}
+                        orange
+                    {% endblock %}
+                    {# -- END OF -- sticky aside style customization #}
+                    {# sticky aside article titles customization #}
+                    {% block second_sticky_first_article_link %}{% endblock %}
+                    {% block sticky_first_article_title %}
+                        Article 1
+                    {% endblock %}
+                    {% block second_sticky_second_article_link %}{% endblock %}
+                    {% block sticky_second_article_title %}
+                        Article 2
+                    {% endblock %}
+                    {% block second_sticky_third_article_link %}{% endblock %}
+                    {% block sticky_third_article_title %}
+                        Article 3
+                    {% endblock %}
+                    {# --END OF -- sticky aside article titles customization #}
+                {% endembed %}
+                {# -- END OF -- Include, custom content and style for the second aside sticky on main page #}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

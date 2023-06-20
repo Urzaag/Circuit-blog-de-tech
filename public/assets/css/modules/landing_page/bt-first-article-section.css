@@ -1,0 +1,109 @@
+.bt-card {
+    transition: transform .2s ease;
+}
+
+.bt-card-colored {
+    box-shadow: var(--bt-main-box-shadow);
+}
+
+
+.bt-card:hover {
+    transform: scale(1.1);
+}
+
+.bt-last-row{
+    margin-bottom: 0 !important;
+}
+
+.col .row:last-of-type .bt-card {
+    margin-bottom: 0;
+}
+
+.bt-bg-light-green{
+    background: var(--bt-bg-card-light-green);
+}
+
+.bt-bg-orange{
+    background: var(--bt-bg-card-orange);
+}
+
+.bt-bg-red{
+    background: var(--bt-bg-card-red);
+}
+
+.bt-card-section1 {
+    display: flex;
+    margin-bottom: var(--bt-article-spacing-horizon);
+    padding: 2rem 1.8rem 2rem 1.2rem;
+    border-radius: var(--bt-main-border-radius);
+    color: var(--bt-main-white);
+}
+
+.bt-card-section1-right {
+    flex-direction: row-reverse;
+}
+
+.bt-card-section1 .bt-img-right{
+    max-width: 18rem;
+    width: 28vw;
+    height: 12rem;
+    object-fit: cover;
+    margin-left: -4rem;
+    margin-right: 2rem;
+    border-radius: var(--bt-main-border-radius);
+    box-shadow: var(--bt-main-box-shadow)
+}
+
+.bt-card-section1 .bt-img-left{
+    max-width: 18rem;
+    width: 28vw;
+    height: 12rem;
+    object-fit: cover;
+    margin-left: 2rem;
+    margin-right: -4rem;
+    border-radius: var(--bt-main-border-radius);
+    box-shadow: var(--bt-main-box-shadow)
+}
+
+.bt-card-section1 .bt-h3 {
+    font-family: var(--bt-main-font);
+    margin-bottom: 1.5rem;
+}
+
+.bt-card-section1 h2 {
+    display: none;
+}
+
+.bt-card-section1 .bt-description {
+    font-family: var(--bt-article-text-font);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.bt-card-section1 .bt-date {
+    font-family: var(--bt-main-font);
+    margin-bottom: 1.5rem;
+}
+
+@media (width <= 740px) {
+    .bt-first-section-article {
+        flex-direction: column-reverse;
+    }
+    .bt-card-section1 {
+        margin-top: 3rem;
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .bt-card-section1 .bt-img-right {
+        margin: -5rem 0 0.5rem 0;
+        width: 100%;
+    }
+
+    .bt-card-section1 .bt-img-left {
+        margin: -5rem 0 0.5rem 0;
+        width: 100%;
+    }
+}
+

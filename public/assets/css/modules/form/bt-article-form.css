@@ -1,0 +1,30 @@
+.bt-container-form {
+    width: 60%;
+}
+
+.bt-form-h1 {
+    width: 50%;
+}
+
+.bt-form-input {
+    border-radius: initial;
+    border-left: solid 0.063rem #002D2B;
+    border-bottom: solid 0.063rem #002D2B;
+    border-top: none;
+    border-right: none;
+    background: var(--bt-main-white);
+}
+
+.bt-input-file {
+    display: none;
+}
+
+@media screen and (max-width: 767px ){
+    .bt-container-form {
+        width: 90%;
+    }
+
+    .bt-form-h1 {
+        width: 90%;
+    }
+}

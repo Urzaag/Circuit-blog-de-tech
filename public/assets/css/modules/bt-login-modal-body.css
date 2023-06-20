@@ -1,0 +1,87 @@
+.modal-content {
+    background: var(--bt-main-bg-color);
+    font-family: var(--bt-logo-font);
+}
+
+.modal-header {
+    justify-content: space-between;
+    color: var(--bt-main-white);
+    border: none;
+    flex-direction: column;
+}
+
+.modal-header .modal-title {
+    text-align: center;
+}
+
+.modal-header .btn-close {
+    margin: 0;
+    position: absolute;
+    left: 92%;
+    top: 1%;
+}
+
+.modal-title {
+    margin: 0 auto;
+    font-size: 4rem !important;
+}
+
+h4.modal-title {
+    font-size: 1rem !important;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--bt-main-white);
+    margin: 0 5vh;
+}
+
+.bt-button-login {
+    color: var(--bt-main-white);
+    border: 1px solid var(--bt-main-white);
+    background: var(--bt-main-bg-color);
+    padding: 0.1rem 1rem;
+    border-radius: var(--bt-main-border-radius);
+}
+
+.bt-button-login:hover {
+    background : var(--bt-bg-card-light-green);
+}
+
+.modal-body a {
+    margin-top: 1rem;
+    color: var(--bt-main-white);
+}
+
+.modal-footer {
+    margin-top: 5vh;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--bt-main-white);
+    border: none;
+}
+
+.bt-modal-footer-line {
+    width: 90%;
+    background: var(--bt-main-white);
+    height: 0.125rem;
+    margin-bottom: 1rem;
+}
+
+.modal-footer .btn-primary {
+    background: var(--bt-main-bg-color);
+    border: 1px solid var(--bt-main-white);
+    border-radius: var(--bt-main-border-radius);
+}
+
+.bt-login-logo {
+    height: 20vh;
+    width: auto;
+}
+
+.bt-profile-link {
+    margin-bottom: 5vh;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,10 @@
+/vendor/
+/temp/*
+.phpcs-cache
+*.cache
+db.php
+.idea
+.vscode
+public/assets/images/
+.DS_Store
+public/.DS_Store

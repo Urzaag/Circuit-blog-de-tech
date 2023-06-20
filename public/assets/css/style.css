@@ -1,0 +1,99 @@
+@import url('modules/variables.css');
+@import "modules/bt-login-modal-first-button.css";
+@import "modules/bt-login-modal-body.css";
+@import "modules/bt-navbar.css";
+@import "modules/bt-sticky-aside.css";
+@import "modules/bt-footer.css";
+@import "modules/bt-button.css";
+
+@import "modules/landing_page/bt-grid-articles.css";
+@import "modules/landing_page/bt-first-article-section.css";
+@import "modules/landing_page/bt-bar-newsletter.css";
+@import "modules/landing_page/bt-second-article-section.css";
+
+@import "modules/article/bt-article-head.css";
+@import "modules/article/bt-article-content.css";
+@import "modules/article/bt-bar-next-article.css";
+
+
+@import "modules/form/bt-article-form.css";
+@import "modules/form/bt-form.css";
+
+@import "modules/bt-contact.css";
+@import "modules/bt-comments.css";
+
+@import "modules/bt-profile.css";
+
+@import "modules/user/edit.css";
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../fonts/Rajdhani/Rajdhani-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('../fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/static/Raleway-Regular.ttf');
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bt-main-white);
+}
+
+h2, h3, h4 {
+    font-family: var(--bt-main-font);
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+p {
+    font-family: var(--bt-main-font);
+}
+
+.bt-article {
+    font-family: var(--bt-article-text-font);
+}
+
+.bt-description {
+    font-style: italic;
+}
+
+.container {
+    margin: var(--bt-spacing) auto;
+}
+
+.container .bt-first-section-article, .container .bt-second-section-article {
+    gap: 5vw;
+}
+
+.bt-first-section-article .col .row, .bt-second-section-article .col .row{
+    justify-content: space-between;
+    margin-bottom: var(--bt-spacing);
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .row {
+        --bs-gutter-x: 0;
+    }
+    .container .bt-first-section-article, .container .bt-second-section-article {
+        gap: 0;
+    }
+}

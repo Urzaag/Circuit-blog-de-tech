@@ -1,0 +1,54 @@
+<a class="bt-section-article" href="
+        {# Custom link for card article #}
+    {% block section_article_link %}
+    {% endblock %}">
+    <div class="bt-card
+            {# Custom style for card article #}
+            {% block section_article_card_style %}
+            {% endblock %}">
+        <img class="
+                {# Custom style for card image #}
+                {% block section_article_img_style %}
+                {% endblock %}"
+            {# Custom content for card image #}
+             src="/assets/images/{% block section_article_img_content %}{% endblock%}">
+        <div>
+            <h2 class="
+                    {# Custom style for card h2 #}
+                    {% block section_article_h2_style %}
+                    {% endblock %}">
+                {# Custom content for card h2 #}
+                {% block section_article_h2_content %}
+                    Invest in Valby's sparkling new construction
+                {% endblock %}
+            </h2>
+            <p class="
+                    {# Custom style for card author and date #}
+                    {% block section_article_author_date_style %}
+                    {% endblock %}">
+                {# Custom content for card author and date #}
+                {% block section_article_author_date_content %}
+                {% endblock %}
+            </p>
+            <h3 class="
+                    {# Custom style for card h3 #}
+                    {% block section_article_h3_style %}
+                    {% endblock %}">
+                {# Custom content for card h3 #}
+                {% block section_article_h3_content %}
+                {% endblock %}
+            </h3>
+            <p class="
+                    {# Custom style for card description #}
+                    {% block section_article_description_style %}
+                    {% endblock %}">
+                {# Custom content for card description #}
+                {% block section_article_description_content %}
+                    Lorem ipsum dolor sit amer, consectetur adipiscing elit. Sel dapibus, orci at maximus consequat, nune tellus facilisis.
+                {% endblock %}
+            </p>
+            {% block link %}{% endblock %}
+            {% block comment_content %}{% endblock %}
+        </div>
+    </div>
+</a>

@@ -1,0 +1,14 @@
+.article-head  {
+    background: var(--bt-main-bg-color);
+    color: var(--bt-main-white);
+}
+
+.bt-article-head-line {
+    width: 80%;
+    height: 0.063rem;
+    background: var(--bt-main-white);
+    margin: auto;
+}
+.article-head .row {
+    --bs-gutter-x: 0;
+}

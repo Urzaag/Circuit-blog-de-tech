@@ -1,0 +1,81 @@
+#bt-newsletter-total-bar {
+    background: linear-gradient(270deg, #002D2B 0%, #0A9A93 49.84%, #002D2B 100%);
+    color: var(--bt-main-white);
+    height: 16.875rem;
+    font-family: var(--bt-main-font);
+}
+
+#bt-newsletter-total-bar a {
+    text-decoration: none;
+    color: var(--bt-main-white);
+}
+
+#bt-newsletter-left-bar    {
+    background-color: var(--bt-main-white);
+    height: 0.25rem;
+    width: 35%;
+    margin-top: 1.688rem;
+    margin-right: 3.125rem;
+}
+
+#bt-newsletter-right-bar {
+    background-color: var(--bt-main-white);
+    height: 0.25rem;
+    width: 35%;
+    margin-top: 1.688rem;
+    margin-left: 3.125rem;
+}
+
+#bt-newsletter-total-bar h1 {
+    font-size: 3.438rem;
+}
+
+#bt-newsletter-total-bar h2 {
+    font-size: 2.5rem;
+}
+
+#bt-newsletter-total-bar h3 {
+    font-size: 3.75rem;
+}
+
+footer #bt-login-close {
+    --bs-btn-color: var(--bt-main-white);
+    --bs-btn-hover-bg: none;
+    --bs-btn-hover-color: none;
+}
+
+.gridwormCanvas {
+    height: 16.875rem;
+    width: 100%;
+    position: absolute;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1000px)   {
+
+    #bt-newsletter-total-bar {
+        height: 19.375rem;
+    }
+
+    #bt-newsletter-left-bar    {
+        display: none;
+    }
+
+    #bt-newsletter-right-bar {
+        display: none;
+    }
+
+    #bt-newsletter-total-bar h1 {
+        font-size: 1.875rem;
+    }
+
+    #bt-newsletter-total-bar h2 {
+        font-size: 0.938rem;
+    }
+
+    #bt-newsletter-total-bar h3 {
+        font-size: 2.188rem;
+        text-align: center;
+    }
+}

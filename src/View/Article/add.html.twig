@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {% embed 'Article/_form.html.twig' %}
+        {% block title_form %}
+            Ajoute ton article
+        {% endblock %}
+        {% block button_picture1 %}
+            Télécharge ton image principale (obligatoire)
+        {% endblock %}
+        {% block button_picture2 %}
+            Télécharge ta deuxième image (facultatif)
+        {% endblock %}
+        {% block button_picture3 %}
+            Télécharge ta troisième image (facultatif)
+        {% endblock %}
+        {% block button_submit %}
+            Publier
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

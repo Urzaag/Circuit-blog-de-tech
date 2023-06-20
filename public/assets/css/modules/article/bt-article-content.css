@@ -1,0 +1,21 @@
+.bt-article {
+    font-family: var(--bt-article-text-font);
+    width: 70%;
+}
+
+.bt-article-img-1 {
+    width: 70%;
+}
+
+.bt-article-img {
+    width: 50%;
+}
+
+@media screen and (max-width: 780px){
+    .bt-article-img-1, .bt-article-img, .bt-article {
+        width: 100%;
+    }
+
+}
+
+

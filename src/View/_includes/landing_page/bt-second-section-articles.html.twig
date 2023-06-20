@@ -1,0 +1,228 @@
+<div class="row">
+    <div class="col-sm-5">
+        {# Include, custom content and style for row : 1 article : 1 #}
+        {% embed '_includes/landing_page/bt-section-article-card.html.twig' %}
+            {# Custom style for card article #}
+            {% block section_article_card_style %}
+                bt-card-section2
+                bt-bg-light-green
+                bt-card-colored
+            {% endblock %}
+            {% block section_article_h2_style %}
+            {% endblock %}
+            {% block section_article_author_date_style %}
+                bt-date
+            {% endblock %}
+            {# -- END OF -- Custom style for card article #}
+            {# Custom content for card article, link, titles, author and date, description, then image #}
+            {% block section_article_link %}
+                /article/show?id={{ articles[3].id_article }}
+            {% endblock %}
+            {% block section_article_h2_content %}
+                {{ articles[3].title }}
+            {% endblock %}
+            {% block section_article_img_content %}{{ pictures['id_article: 4'].pictureMain.link }}{% endblock %}
+            {% block section_article_author_date_content %}
+                {{ author['id_article: 4'].user_name }}
+                {{ articles[3].article_created_at|date("d/m/Y") }}
+            {% endblock %}
+            {# -- END OF -- Custom content for card article, link, title then image #}
+        {% endembed %}
+        {# -- END OF -- Include, custom content and style for row : 1 article : 1 #}
+    </div>
+    <div class="col-sm-5">
+        {# Include, custom content and style for row : 1 article : 2 #}
+        {% embed '_includes/landing_page/bt-section-article-card.html.twig' %}
+            {# Custom style for card article #}
+            {% block section_article_card_style %}
+                bt-card-section2
+            {% endblock %}
+            {% block section_article_h2_style %}
+            {% endblock %}
+            {% block section_article_author_date_style %}
+                bt-date
+            {% endblock %}
+            {# -- END OF -- Custom style for card article #}
+            {# Custom content for card article, link, titles, author and date, description, then image #}
+            {% block section_article_link %}
+                /article/show?id={{ articles[4].id_article }}
+            {% endblock %}
+            {% block section_article_h2_content %}
+                {{ articles[4].title }}
+            {% endblock %}
+            {% block section_article_img_content %}{{ pictures['id_article: 5'].pictureMain.link }}{% endblock %}
+            {% block section_article_author_date_content %}
+                {{ author['id_article: 5'].user_name }}
+                {{ articles[4].article_created_at|date("d/m/Y") }}
+            {% endblock %}
+            {# -- END OF -- Custom content for card article, link, title then image #}
+        {% endembed %}
+        {# -- END OF -- Include, custom content and style for row : 1 article : 2 #}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-5">
+        {# Include, custom content and style for row : 2 article : 1 #}
+        {% embed '_includes/landing_page/bt-section-article-card.html.twig' %}
+            {# Custom style for card article #}
+            {% block section_article_card_style %}
+                bt-card-section2
+            {% endblock %}
+            {% block section_article_h2_style %}
+            {% endblock %}
+            {% block section_article_author_date_style %}
+                bt-date
+            {% endblock %}
+            {% block section_article_h3_style %}
+            {% endblock %}
+            {% block section_article_description_style %}
+            {% endblock %}
+            {# -- END OF -- Custom style for card article #}
+            {# Custom content for card article, link, titles, author and date, description, then image #}
+            {% block section_article_link %}
+                /article/show?id={{ articles[5].id_article }}
+            {% endblock %}
+            {% block section_article_h2_content %}
+                {{ articles[5].title }}
+            {% endblock %}
+            {% block section_article_img_content %}{{ pictures['id_article: 6'].pictureMain.link }}{% endblock %}
+            {% block section_article_author_date_content %}
+                {{ author['id_article: 6'].user_name }}
+                {{ articles[5].article_created_at|date("d/m/Y") }}
+            {% endblock %}
+            {% block section_article_h3_content %}
+            {% endblock %}
+            {% block section_article_description_content %}
+                Lorem ipsum dolor sit amer, consectetur adipiscing elit. Sel dapibus, orci at maximus consequat, nune tellus facilisis.
+            {% endblock %}
+            {# -- END OF -- Custom content for card article, link, title then image #}
+        {% endembed %}
+        {# -- END OF -- Include, custom content and style for row : 2 article : 1 #}
+    </div>
+    <div class="col-sm-5">
+        {# Include, custom content and style for row : 2 article : 2 #}
+        {% embed '_includes/landing_page/bt-section-article-card.html.twig' %}
+            {# Custom style for card article #}
+            {% block section_article_card_style %}
+                bt-card-section2
+                bt-bg-orange
+                bt-card-colored
+            {% endblock %}
+            {% block section_article_img_style %}
+            {% endblock %}
+            {% block section_article_h2_style %}
+            {% endblock %}
+            {% block section_article_author_date_style %}
+                bt-date
+            {% endblock %}
+            {% block section_article_h3_style %}
+            {% endblock %}
+            {% block section_article_description_style %}
+            {% endblock %}
+            {# -- END OF -- Custom style for card article #}
+            {# Custom content for card article, link, titles, author and date, description, then image #}
+            {% block section_article_link %}
+                /article/show?id={{ articles[6].id_article }}
+            {% endblock %}
+            {% block section_article_h2_content %}
+                {{ articles[6].title }}
+            {% endblock %}
+            {% block section_article_img_content %}{{ pictures['id_article: 7'].pictureMain.link }}{% endblock %}
+            {% block section_article_author_date_content %}
+                {{ author['id_article: 7'].user_name }}
+                {{ articles[6].article_created_at|date("d/m/Y") }}
+            {% endblock %}
+            {% block section_article_h3_content %}
+            {% endblock %}
+            {% block section_article_description_content %}
+                Lorem ipsum dolor sit amer, consectetur adipiscing elit. Sel dapibus, orci at maximus consequat, nune tellus facilisis.
+            {% endblock %}
+            {# -- END OF -- Custom content for card article, link, title then image #}
+        {% endembed %}
+        {# -- END OF -- Include, custom content and style for row : 2 article : 2 #}
+    </div>
+</div>
+<div class="row  bt-last-row">
+    <div class="col-sm-5">
+        {# Include, custom content and style for row : 3 article : 1 #}
+        {% embed '_includes/landing_page/bt-section-article-card.html.twig' %}
+            {# Custom style for card article #}
+            {% block section_article_card_style %}
+                bt-card-section2
+                bt-bg-red
+                bt-card-colored
+            {% endblock %}
+            {% block section_article_img_style %}
+            {% endblock %}
+            {% block section_article_h2_style %}
+            {% endblock %}
+            {% block section_article_author_date_style %}
+                bt-date
+            {% endblock %}
+            {% block section_article_h3_style %}
+            {% endblock %}
+            {% block section_article_description_style %}
+            {% endblock %}
+            {# -- END OF -- Custom style for card article #}
+            {# Custom content for card article, link, titles, author and date, description, then image #}
+            {% block section_article_link %}
+                /article/show?id={{ articles[7].id_article }}
+            {% endblock %}
+            {% block section_article_h2_content %}
+                {{ articles[7].title }}
+            {% endblock %}
+            {% block section_article_img_content %}{{ pictures['id_article: 8'].pictureMain.link }}{% endblock %}
+            {% block section_article_author_date_content %}
+                {{ author['id_article: 8'].user_name }}
+                {{ articles[7].article_created_at|date("d/m/Y") }}
+            {% endblock %}
+            {% block section_article_h3_content %}
+            {% endblock %}
+            {% block section_article_description_content %}
+                Lorem ipsum dolor sit amer, consectetur adipiscing elit. Sel dapibus, orci at maximus consequat, nune tellus facilisis.
+            {% endblock %}
+            {# -- END OF -- Custom content for card article, link, title then image #}
+        {% endembed %}
+        {# -- END OF -- Include, custom content and style for row : 3 article : 1 #}
+    </div>
+    <div class="col-sm-5">
+        {# Include, custom content and style for row : 3 article : 2#}
+        {% embed '_includes/landing_page/bt-section-article-card.html.twig' %}
+            {# Custom style for card article #}
+            {% block section_article_card_style %}
+                bt-card-section2
+            {% endblock %}
+            {% block section_article_img_style %}
+            {% endblock %}
+            {% block section_article_h2_style %}
+            {% endblock %}
+            {% block section_article_author_date_style %}
+                bt-date
+            {% endblock %}
+            {% block section_article_h3_style %}
+            {% endblock %}
+            {% block section_article_description_style %}
+            {% endblock %}
+            {# -- END OF -- Custom style for card article #}
+            {# Custom content for card article, link, titles, author and date, description, then image #}
+            {% block section_article_link %}
+                /article/show?id={{ articles[8].id_article }}
+            {% endblock %}
+            {% block section_article_h2_content %}
+                {{ articles[8].title }}
+            {% endblock %}
+            {% block section_article_img_content %}{{ pictures['id_article: 9'].pictureMain.link }}{% endblock %}
+            {% block section_article_author_date_content %}
+                {{ author['id_article: 9'].user_name }}
+                {{ articles[8].article_created_at|date("d/m/Y") }}
+            {% endblock %}
+            {% block section_article_h3_content %}
+            {% endblock %}
+            {% block section_article_description_content %}
+                Lorem ipsum dolor sit amer, consectetur adipiscing elit. Sel dapibus, orci at maximus consequat, nune tellus facilisis.
+            {% endblock %}
+            {# -- END OF -- Custom content for card article, link, title then image #}
+        {% endembed %}
+        {# -- END OF -- Include, custom content and style for row : 3 article : 2 #}
+    </div>
+</div>

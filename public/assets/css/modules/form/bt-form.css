@@ -1,0 +1,30 @@
+.bt-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    color: var(--bt-main-white);
+    font-family: var(--bt-main-font);
+}
+
+.bt-form input {
+    border: none;
+    background: none;
+    border-bottom: 0.125rem solid var(--bt-main-white);
+    margin-bottom: 4vh;
+    width: 100%;
+    color: var(--bt-main-white);
+}
+
+.bt-form input::placeholder {
+    color: var(--bt-main-white);
+}
+
+.bt-form .row {
+    padding: 1vw;
+}
+
+.bt-form-submit {
+    width: 5vw;
+    margin: 0 auto;
+}

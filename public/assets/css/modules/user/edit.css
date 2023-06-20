@@ -1,0 +1,58 @@
+.bt-form-user {
+    background: var(--bt-main-bg-color);
+    border-radius: var(--bt-main-border-radius);
+    width: 100%;
+}
+
+.bt-form-user .row {
+    width: 100%;
+    padding: 0.9vh;
+}
+
+.bt-form-user input {
+    width: 80%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 2px;
+    opacity: 0.6;
+    filter: invert(0.8);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1
+}
+
+.bt-button-edit {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.bt-edit-row-lol-nimp-balek {
+    /*margin: 5vh 0;*/
+}
+
+.bt-user-delete {
+    margin: 0 auto;
+    display: flex;
+}
+
+.bt-button-user-delete {
+    background: var(--bt-bg-card-red);
+    border: none;
+}
+
+@media screen and (max-width: 780px){
+    .bt-form-user .row {
+        display: initial;
+        text-align: center;
+    }
+    .bt-form-user label {
+        display: flex;
+        align-items: start;
+        width : 80%;
+        margin:auto;
+    }
+}
